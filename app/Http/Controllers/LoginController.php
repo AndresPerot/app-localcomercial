@@ -12,10 +12,16 @@ class LoginController extends Controller
        $credentials =  $request->only('email', 'password');
 
        if (Auth::attempt($credentials)) {
+
            
           $request->session()->regenerate();
 
-          return redirect()->intended('/home');
+          if(auth()->user()->position == 'Administrador'){
+            return redirect() -> route('admin.index');
+          }else {
+
+          return redirect()->intended('/');
+          }
         }
 
        return redirect('login');
@@ -31,6 +37,5 @@ class LoginController extends Controller
     
         return redirect('/login');
     } 
-
 
 }

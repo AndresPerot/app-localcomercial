@@ -2,7 +2,7 @@
 <html lang="en">
  @include('partials/head')
     <body >
-        @include('partials/navbar')
+        @include('partials/navbaradminhome')
      
             <div class="container p-4">
                  <div class="card border-info">
@@ -11,12 +11,12 @@
             </div>
             <div class="container p-4">
                  <div class="card border-info">
-                 <a href="{{ url('/sell') }}" class="navbar-brand">Sala Ventas</a>
+                 <a href="{{ url('/mantencion/sell') }}" class="navbar-brand">Sala Ventas</a>
                  </div>               
             </div>
             <div class="container p-4">
                  <div class="card border-info">
-                 <a href="{{ url('/mantencion') }}" class="navbar-brand">Mantencion Productos</a>
+                 <a href="{{ url('admin/mantencion') }}" class="navbar-brand">Mantencion Productos</a>
                  </div>               
             </div>
         </div> 

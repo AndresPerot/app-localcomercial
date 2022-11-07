@@ -2,8 +2,7 @@
     @if (Route::has('login'))
         <div class="nav-item">
             @auth
-               
-                <a href="{{ url('/') }}" class="navbar-brand">Home</a>
+                <a href="{{ url('/admin') }}" class="navbar-brand">Home</a>
                  
                 <form action="login" method="post" class="navbar-brand ">
                     @method('put')

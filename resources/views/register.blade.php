@@ -13,6 +13,8 @@
                     name = "name"
                     class = "form-control mb-2"
                     placeholder = "Nombre..." 
+                    min =3
+                    max=50
                  />
                  
                  <input 
@@ -20,6 +22,8 @@
                     name = "lastname"
                     class ="form-control mb-2"
                     placeholder = "Apellido..." 
+                    min=3
+                    max=50
                  />
                  
                  <input 
@@ -27,6 +31,9 @@
                     name = "rut"
                     class = "form-control mb-2"
                     placeholder = "Rut..." 
+                    min=12
+                    max=12
+                    
                  />
                  
                  <input 
