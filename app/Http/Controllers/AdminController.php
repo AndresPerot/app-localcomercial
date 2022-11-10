@@ -11,8 +11,13 @@ class AdminController extends Controller
         return view('/admin/index');
     }
 
-    public function mantencion(){
-        return view('/admin/mantencion');
+    public function indexproductos(){
+        return view('/admin/products/index');
+    }
+
+    public function indexusers(){
+        $users = Users::all();
+        return view('/admin/users/index');
     }
 
 }

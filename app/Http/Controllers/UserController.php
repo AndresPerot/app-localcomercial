@@ -16,7 +16,20 @@ class UserController extends Controller
         $user->email = $request->input('email');
         $user->password = bcrypt($request->input('password'));
         $user->save();
-        return json_encode(["msg" => "usuario agregado"]); 
-        return redirect()->intended('/home');
+        return redirect()->intended('/');
     }
+
+    public function index(){
+        $users = \DB::table('users')->get();
+        return view(('admin/users/index'), compact('users'));   
+
+    }
+
+    public function show($id)
+    {
+        return view('user.profile', [
+            'users' => User::findOrFail($id)
+        ]);
+    }
+
 }

@@ -28,7 +28,6 @@ Route::get('/mantencion', function () {
     return view('mantencion');
 })->middleware('auth')->name('mantencion');
 
-Auth::Route(UserController::class);
 
 Route::post('/register', [UserController::class, 'create']);
 
@@ -40,7 +39,16 @@ Route::get('/admin', [AdminController::class, 'index'])
 ->middleware('auth.admin')    
 ->name('admin.index');
 
-Route::get('/admin/mantencion', [AdminController::class, 'mantencion'])
+Route::get('/admin/products/index', [AdminController::class, 'indexproductos'])
 ->middleware('auth.admin')    
-->name('admin.mantencion');
+->name('admin.indexproductos');
+
+Route::resource('users', UserController::class);
+
+Route::get('/admin/users/index', [UserController::class, 'index'])
+->middleware('auth.admin')    
+->name('users.index');
+
+Route::get('/admin/user/index/{id}', [UserController::class, 'show'])
+->middleware('auth.admin') ;
 

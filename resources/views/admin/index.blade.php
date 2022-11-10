@@ -16,7 +16,12 @@
             </div>
             <div class="container p-4">
                  <div class="card border-info">
-                 <a href="{{ url('admin/mantencion') }}" class="navbar-brand">Mantencion Productos</a>
+                 <a href="{{ url('admin/products/index') }}" class="navbar-brand">Mantencion Productos</a>
+                 </div>               
+            </div>
+            <div class="container p-4">
+                 <div class="card border-info">
+                 <a href="{{ url('admin/users/index') }}" class="navbar-brand">Mantencion Usuarios</a>
                  </div>               
             </div>
         </div> 
